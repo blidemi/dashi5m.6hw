@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
-const Search = ({ onSearch }) => {
+  const Search = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
+
+    
   const handleSearchClick = () => {
     onSearch(searchTerm, false);
   };
@@ -10,14 +12,14 @@ const Search = ({ onSearch }) => {
   };
 
 
-
+    
   return (
     <div>
       <input 
         type="text" 
         value={searchTerm} 
         onChange={(e) => setSearchTerm(e.target.value)} 
-        placeholder="Поиск по названию"/>
+        placeholder="Поиск по title"/>
       <button onClick={handleSearchClick}>Искать</button>
       <button onClick={handleAdvancedSearchClick}>Расширенный поиск</button>
     </div>
